@@ -1,5 +1,11 @@
 # format-prompt
 
+## 1.0.2
+
+### Patch Changes
+
+- 9e5ef86: Update homepage url
+
 ## 1.0.1
 
 ### Patch Changes
