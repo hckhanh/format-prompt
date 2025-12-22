@@ -13,9 +13,7 @@ const endRegex = /([\s\n\r]+)$/
  *
  * The function performs the following operations:
  * - Preserves leading and trailing whitespace (spaces, newlines, carriage returns)
- * - Trims non-breaking spaces within the content
  * - Trims leading/trailing whitespace from individual lines
- * - Removes empty lines from the content
  * - Limits consecutive empty lines to a maximum of 1
  * - Collapses consecutive whitespace characters to a maximum of 2
  *
@@ -30,7 +28,7 @@ const endRegex = /([\s\n\r]+)$/
  * // Preserves leading/trailing whitespace
  * formatString("  Hello  ") // "  Hello  "
  *
- * // Removes excessive empty lines
+ * // Limits excessive consecutive empty lines
  * formatString("Line 1\n\n\n\nLine 2") // "Line 1\n\nLine 2"
  * ```
  */
