@@ -155,6 +155,65 @@ Line 2`
     expect(result).toBe('Text with\t mixed whitespace')
   })
 
+  it('should handle code with tab indentation', () => {
+    const result = prompt`
+		function example() {
+			return "value"
+		}
+	`
+    expect(result).toBe('function example() {\nreturn "value"\n}')
+  })
+
+  it('should handle code with nested tab indentation', () => {
+    const result = prompt`
+		if (condition) {
+			for (let i = 0; i < 10; i++) {
+				console.log(i)
+			}
+		}
+	`
+    expect(result).toBe(
+      'if (condition) {\nfor (let i = 0; i < 10; i++) {\nconsole.log(i)\n}\n}',
+    )
+  })
+
+  it('should handle mixed tab and space indentation in code', () => {
+    const result = prompt`
+		function mixed() {
+		  const value = 1
+			return value
+		}
+	`
+    expect(result).toBe('function mixed() {\nconst value = 1\nreturn value\n}')
+  })
+
+  it('should preserve tab-indented list structure', () => {
+    const result = prompt`
+		Instructions:
+			1. First step
+			2. Second step
+				- Sub-item A
+				- Sub-item B
+			3. Third step
+	`
+    expect(result).toBe(
+      'Instructions:\n1. First step\n2. Second step\n- Sub-item A\n- Sub-item B\n3. Third step',
+    )
+  })
+
+  it('should handle code block with tabs in template literal', () => {
+    const code = 'console.log("test")'
+    const result = prompt`
+		Example code:
+			${code}
+		
+		This demonstrates tab indentation.
+	`
+    expect(result).toBe(
+      'Example code:\nconsole.log("test")\n\nThis demonstrates tab indentation.',
+    )
+  })
+
   it('should preserve single newlines but collapse multiple', () => {
     const result = prompt`
       Paragraph 1
