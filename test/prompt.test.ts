@@ -101,7 +101,7 @@ Line 2`
 
   it('should handle complex prompt example from README', () => {
     const result = prompt`
-      You are a security guard that analyze the given email for spam/scam/toxicity/business relevance:
+      You are a security guard that analyzes the given email for spam/scam/toxicity/business relevance:
       
       Score each category and provide recommendation. Focus on:
         * Spam: unsolicited bulk/promotional content
