@@ -1,6 +1,6 @@
 {
-  "name": "what-the-fetch-docs",
-  "description": "Documentation website for what-the-fetch - Type-safe API client with schema validation",
+  "name": "format-prompt-docs",
+  "description": "Documentation website for format-prompt - A utility to format prompts for optimal token usage",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -21,10 +21,10 @@
     "react-dom": "19.2.3"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.3.8",
+    "@biomejs/biome": "2.3.10",
     "@tailwindcss/postcss": "4.1.17",
     "@types/mdx": "2.0.13",
-    "@types/node": "24.10.2",
+    "@types/node": "24.10.4",
     "@types/react": "19.2.7",
     "@types/react-dom": "19.2.3",
     "babel-plugin-react-compiler": "1.0.0",

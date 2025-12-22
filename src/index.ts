@@ -8,8 +8,13 @@ function formatString(s: string): string {
   const start = startRegex.exec(s)?.[0] ?? ''
   const end = endRegex.exec(s)?.[0] ?? ''
 
-  const formated = collapse(s, { trimLines: true, trimnbsp: true }).result
-  return collWhitespace(start + formated + end, 2)
+  const formatted = collapse(s, {
+    trimnbsp: true,
+    trimLines: true,
+    removeEmptyLines: true,
+    limitConsecutiveEmptyLinesTo: 1,
+  }).result
+  return collWhitespace(start + formatted + end, 2)
 }
 
 export function prompt(

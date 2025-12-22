@@ -11,7 +11,7 @@ We release patches for security vulnerabilities. Currently supported versions:
 
 ## Reporting a Vulnerability
 
-We take the security of what-the-fetch seriously. If you believe you have found a security vulnerability, please report it to us as described below.
+We take the security of format-prompt seriously. If you believe you have found a security vulnerability, please report it to us as described below.
 
 ### Please do NOT:
 
@@ -41,23 +41,21 @@ Please include the following information in your report:
 
 ## Security Best Practices
 
-When using what-the-fetch in your applications:
+When using format-prompt in your applications:
 
-1. **Keep Dependencies Updated**: Regularly update to the latest version of what-the-fetch to receive security patches
-2. **Input Validation**: Always validate user input before passing it to API calls, even with schema validation enabled
-3. **Use TypeScript**: Take advantage of TypeScript's type safety to catch potential issues at compile time
-4. **Schema Validation**: Ensure your schemas properly validate all response data to prevent unexpected data from being processed
+1. **Keep Dependencies Updated**: Regularly update to the latest version of format-prompt to receive security patches
+2. **Use TypeScript**: Take advantage of TypeScript's type safety to catch potential issues at compile time
+3. **Sanitize Interpolated Values**: Be cautious when interpolating user-provided values into prompts to prevent prompt injection attacks
 
 ## Scope
 
 The following are considered in scope for security reports:
 
-- Schema validation bypass vulnerabilities
 - Type safety violations
-- URL injection vulnerabilities
-- XSS vectors through API responses
-- Data leakage through improper validation
-- Any behavior that could lead to security issues in applications using what-the-fetch
+- String manipulation vulnerabilities that could lead to prompt injection
+- XSS vectors through improper string handling
+- Data leakage through template literal interpolation
+- Any behavior that could lead to security issues in applications using format-prompt
 
 ## Out of Scope
 
@@ -82,4 +80,4 @@ For any questions about this security policy, please contact: hi@khanh.id
 
 ## Learn More
 
-For general bugs and feature requests, please use our [GitHub Issues](https://github.com/hckhanh/what-the-fetch/issues).
+For general bugs and feature requests, please use our [GitHub Issues](https://github.com/hckhanh/format-prompt/issues).
