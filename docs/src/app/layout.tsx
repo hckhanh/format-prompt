@@ -6,22 +6,22 @@ import { inter, jetbrainsMono } from '@/lib/fonts'
 
 export const metadata: Metadata = {
   title: {
-    default: 'what-the-fetch - Type-Safe API Client with Schema Validation',
-    template: '%s | what-the-fetch',
+    default: 'format-prompt - Format Prompts for Optimal Token Usage',
+    template: '%s | format-prompt',
   },
   description:
-    'Type-safe API client with schema validation using Standard Schema. Works with Zod, Valibot, ArkType, and more for building robust API clients.',
+    'A utility to format prompts for cleaner presentation and optimal token usage. Removes unused spaces and line breaks while preserving structure.',
   keywords: [
-    'api client',
-    'fetch',
-    'type-safe',
-    'schema validation',
+    'prompt',
+    'format',
+    'llm',
+    'ai',
+    'template',
+    'string',
+    'whitespace',
     'typescript',
     'javascript',
-    'what-the-fetch',
-    'standard schema',
-    'zod',
-    'valibot',
+    'format-prompt',
   ],
   authors: [
     {
@@ -30,21 +30,21 @@ export const metadata: Metadata = {
     },
   ],
   creator: 'Khánh Hoàng',
-  metadataBase: new URL('https://fetch.khanh.id'),
+  metadataBase: new URL('https://format-prompt.khanh.id'),
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://fetch.khanh.id',
-    title: 'what-the-fetch - Type-Safe API Client with Schema Validation',
+    url: 'https://format-prompt.khanh.id',
+    title: 'format-prompt - Format Prompts for Optimal Token Usage',
     description:
-      'Type-safe API client with schema validation using Standard Schema. Build robust API clients with full TypeScript support.',
-    siteName: 'what-the-fetch',
+      'A utility to format prompts for cleaner presentation and optimal token usage. Works with template literals.',
+    siteName: 'format-prompt',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'what-the-fetch - Type-Safe API Client',
+    title: 'format-prompt - Format Prompts for AI',
     description:
-      'Type-safe API client with schema validation using Standard Schema. Build robust API clients with full TypeScript support.',
+      'A utility to format prompts for cleaner presentation and optimal token usage. Works with template literals.',
   },
   robots: {
     index: true,

@@ -1,8 +1,8 @@
-# Copilot Instructions for what-the-fetch
+# Copilot Instructions for format-prompt
 
 ## Project Overview
 
-This is **what-the-fetch**, a type-safe API client library with schema validation using Standard Schema. The project provides end-to-end type inference for API requests and responses, integrating with popular schema validation libraries like Zod, Valibot, and ArkType.
+This is **format-prompt**, a utility library for formatting prompts for cleaner presentation and optimal token usage. The project removes unnecessary whitespace and line breaks while preserving the intended structure of prompts.
 
 ## Installation & Setup
 
@@ -42,29 +42,28 @@ npm run format
 ### Testing
 - Tests are located in the `test/` directory
 - Use Vitest as the test framework
-- Mock external dependencies (e.g., `global.fetch`)
 - Test file naming: `*.test.ts`
 - Include tests for:
   - Happy paths
-  - Error cases
   - Edge cases
-  - Type safety validations
+  - Whitespace handling
+  - Interpolation
 
 ## Project Structure
 
 ```
 src/
-  ├── index.ts       # Main export and createFetch function
-  ├── types.ts       # Type definitions
-  └── utils.ts       # Utility functions (e.g., validation)
+  └── index.ts       # Main export and prompt function
 test/
-  └── createFetch.test.ts  # Test suite
+  └── prompt.test.ts # Test suite
+benchmark/
+  └── prompt.bench.ts # Benchmarks
 ```
 
 ## Key Dependencies
 
-- **@standard-schema/spec**: Standard Schema specification for validation
-- **fast-url**: URL building and parameter substitution
+- **string-collapse-leading-whitespace**: Collapse leading whitespace
+- **string-collapse-white-space**: Collapse general whitespace
 - **vitest**: Testing framework
 - **biome**: Linting and formatting
 - **tsdown**: TypeScript bundler powered by rolldown
@@ -111,7 +110,7 @@ The CLI will ask you:
 - **Be descriptive**: Write summaries that explain what changed and why
 - **Include examples**: For new features, include code examples in the changeset
 - **One changeset per PR**: Generally, create one changeset per pull request
-- **Edit the changeset file**: After creation, you can manually edit `.changeset/*.md` to add more details, examples, or formatting
+- **Edit the changeset file**: After creation, you can manually edit `.changeset/*.md` to add more details
 
 ### Changeset File Format
 
@@ -119,7 +118,7 @@ Changesets are stored in `.changeset/*.md` files with the following format:
 
 ```markdown
 ---
-"what-the-fetch": minor
+"format-prompt": minor
 ---
 
 Brief summary of the change
@@ -131,21 +130,20 @@ More details, code examples, migration guides, etc.
 
 ## API Design Principles
 
-- **Type Safety First**: All APIs must provide full type inference
-- **Standard Schema Compatible**: Work with any schema library implementing Standard Schema
-- **Minimal Surface Area**: Keep the API simple and focused
+- **Simplicity First**: The API should be simple and intuitive
+- **Template Literal Support**: Work seamlessly with JavaScript template literals
+- **Minimal Surface Area**: Keep the API focused on one thing - formatting prompts
 - **Zero Breaking Changes**: Maintain backward compatibility
 - **Bundle Size**: Keep dependencies minimal and bundle size small
 
 ## Common Tasks
 
 ### Adding a New Feature
-1. Define types in `types.ts` if needed
-2. Implement functionality in `index.ts` or `utils.ts`
-3. Add JSDoc comments with examples
-4. Write comprehensive tests
-5. Update README.md if adding public APIs
-6. Add a changeset with `npx changeset add` (select "minor")
+1. Implement functionality in `src/index.ts`
+2. Add JSDoc comments with examples
+3. Write comprehensive tests
+4. Update README.md if adding public APIs
+5. Add a changeset with `npx changeset add` (select "minor")
 
 ### Fixing a Bug
 1. Write a failing test that reproduces the bug
@@ -165,6 +163,4 @@ More details, code examples, migration guides, etc.
 - This project uses **Bun** in CI but supports all package managers
 - The package is published to both npm and JSR (Deno)
 - The library must remain framework-agnostic
-- Response validation happens automatically when schemas are provided
-- Default method is GET; POST is used when body is present
-- Custom headers merge with default headers (Content-Type: application/json)
+- The function uses string manipulation utilities for optimal performance
