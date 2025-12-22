@@ -285,7 +285,7 @@ Line 2`
                       
                        
                         
-                        You are a security guard that analyze the given email for spam/scam/toxicity/business relevance:
+                        You are a security guard that analyzes the given email for spam/scam/toxicity/business relevance:
   
    
    
@@ -332,7 +332,7 @@ Line 2`
 
     expect(
       result,
-    ).toBe(`You are a security guard that analyze the given email for spam/scam/toxicity/business relevance:
+    ).toBe(`You are a security guard that analyzes the given email for spam/scam/toxicity/business relevance:
 
 Score each category and provide recommendation. Focus on:
 * Spam: unsolicited bulk/promotional content

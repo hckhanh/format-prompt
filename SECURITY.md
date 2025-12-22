@@ -44,19 +44,17 @@ Please include the following information in your report:
 When using format-prompt in your applications:
 
 1. **Keep Dependencies Updated**: Regularly update to the latest version of format-prompt to receive security patches
-2. **Input Validation**: Always validate user input before passing it to API calls, even with schema validation enabled
-3. **Use TypeScript**: Take advantage of TypeScript's type safety to catch potential issues at compile time
-4. **Schema Validation**: Ensure your schemas properly validate all response data to prevent unexpected data from being processed
+2. **Use TypeScript**: Take advantage of TypeScript's type safety to catch potential issues at compile time
+3. **Sanitize Interpolated Values**: Be cautious when interpolating user-provided values into prompts to prevent prompt injection attacks
 
 ## Scope
 
 The following are considered in scope for security reports:
 
-- Schema validation bypass vulnerabilities
 - Type safety violations
-- URL injection vulnerabilities
-- XSS vectors through API responses
-- Data leakage through improper validation
+- String manipulation vulnerabilities that could lead to prompt injection
+- XSS vectors through improper string handling
+- Data leakage through template literal interpolation
 - Any behavior that could lead to security issues in applications using format-prompt
 
 ## Out of Scope
