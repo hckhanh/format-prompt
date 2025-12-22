@@ -1,3 +1,4 @@
+import { encode } from '@toon-format/toon'
 import { describe, expect, it } from 'vitest'
 import { prompt } from '../src'
 
@@ -27,7 +28,7 @@ Line 3`
 
 Line 2`
     // The function collapses whitespace but may preserve some line breaks
-    expect(result).toBe('Line 1\n\n\nLine 2')
+    expect(result).toBe('Line 1\n\nLine 2')
   })
 
   it('should handle template interpolation', () => {
@@ -165,7 +166,7 @@ Line 2`
       Paragraph 3
     `
     // Multiple blank lines are partially collapsed
-    expect(result).toBe('Paragraph 1\n\nParagraph 2\n\n\n\nParagraph 3')
+    expect(result).toBe('Paragraph 1\n\nParagraph 2\n\nParagraph 3')
   })
 
   it('should handle interpolation with whitespace around it', () => {
@@ -208,5 +209,94 @@ Line 2`
       Line three
     `
     expect(result).toBe('Line one\nLine two\nLine three')
+  })
+
+  it('should handle many empty lines', () => {
+    const result = prompt`        
+  
+  
+  
+                
+                
+                
+                
+                    
+                    
+                     
+                      
+                       
+                        
+                        You are a security guard that analyze the given email for spam/scam/toxicity/business relevance:
+  
+   
+   
+    
+     
+      
+               
+               
+                 
+                 
+                  
+                   
+                    
+                      
+                       
+                       
+                        
+                         
+                          
+                          
+            Score each category and provide recommendation. Focus on:
+              * Spam: unsolicited bulk/promotional content
+              * Scam: phishing, fraud, identity theft attempts
+              * Toxicity: hate speech, threats, harassment
+              * Business relevance: legitimate business inquiries, job opportunities
+              * Suspicious patterns: urgent language, poor grammar, suspicious URLs, sensitive info requests
+              * Advertisement: explicit promotional content, product/service offers, marketing campaigns
+
+                        If you are not sure about any links, emails or any information, use tools.
+            
+            ${encode({ demo: 1, array: [1, 2, 3], nested: { a: 'b' } })}
+
+            If you are not sure about any links, emails or any information, use tools.
+            
+            
+            ${encode({ demo: 1, array: [1, 2, 3], nested: { a: 'b' } })}
+            
+            
+            
+            
+            
+            asdasd
+`
+
+    expect(
+      result,
+    ).toBe(`You are a security guard that analyze the given email for spam/scam/toxicity/business relevance:
+
+Score each category and provide recommendation. Focus on:
+* Spam: unsolicited bulk/promotional content
+* Scam: phishing, fraud, identity theft attempts
+* Toxicity: hate speech, threats, harassment
+* Business relevance: legitimate business inquiries, job opportunities
+* Suspicious patterns: urgent language, poor grammar, suspicious URLs, sensitive info requests
+* Advertisement: explicit promotional content, product/service offers, marketing campaigns
+
+If you are not sure about any links, emails or any information, use tools.
+
+demo: 1
+array[3]: 1,2,3
+nested:
+  a: b
+
+If you are not sure about any links, emails or any information, use tools.
+
+demo: 1
+array[3]: 1,2,3
+nested:
+  a: b
+
+asdasd`)
   })
 })
