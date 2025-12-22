@@ -26,7 +26,7 @@ jobs:
         with:
           mode: firewall
       - name: Format code
-        run: bun biome check --write
+        run: bun format
       - name: Fix package.json
         run: bun syncpack fix
       - name: Format package.json
