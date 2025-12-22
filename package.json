@@ -1,7 +1,7 @@
 {
   "name": "format-prompt",
   "description": "A utility to format prompts for a cleaner presentation and optimal token usage",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": {
     "name": "Khánh Hoàng",
     "email": "hi@khanh.id",
