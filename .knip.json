@@ -4,7 +4,7 @@
     ".": {
       "entry": ["test/**/*.ts", "benchmark/**/*.ts"],
       "project": ["src/**", "test/**", "benchmark/**"],
-      "ignoreDependencies": ["@changesets/config"]
+      "ignoreDependencies": ["@changesets/config", "baseline-browser-mapping"]
     },
     "docs": {
       "project": ["src/**"]
