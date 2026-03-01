@@ -8,6 +8,7 @@ const withMDX = createMDX()
 const config = {
   reactStrictMode: true,
   reactCompiler: true,
+  serverExternalPackages: ['@takumi-rs/image-response'],
   redirects() {
     return [
       {
