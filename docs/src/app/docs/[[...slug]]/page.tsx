@@ -5,6 +5,7 @@ import {
   DocsTitle,
 } from 'fumadocs-ui/layouts/docs/page'
 import { createRelativeLink } from 'fumadocs-ui/mdx'
+import type { LoaderConfig, LoaderOutput } from 'fumadocs-core/source'
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { LLMCopyButton, ViewOptions } from '@/components/ai/page-actions'
@@ -36,7 +37,7 @@ export default async function Page(props: PageProps<'/docs/[[...slug]]'>) {
         <MDX
           components={getMDXComponents({
             // this allows you to link to other pages with relative file paths
-            a: createRelativeLink(source, page),
+            a: createRelativeLink(source as unknown as LoaderOutput<LoaderConfig>, page),
           })}
         />
       </DocsBody>
