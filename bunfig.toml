@@ -1,3 +1,6 @@
 [install]
 exact = true
 linker = "isolated"
+
+[install.cache]
+disableManifest = true

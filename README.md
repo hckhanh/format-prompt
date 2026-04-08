@@ -7,6 +7,7 @@ A utility to format prompts for a cleaner presentation and optimal token usage. 
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=hckhanh_format-prompt&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=hckhanh_format-prompt)
 [![Bundle Size](https://badgen.net/bundlephobia/minzip/format-prompt)](https://bundlephobia.com/result?p=format-prompt)
 [![CodSpeed Badge](https://img.shields.io/endpoint?url=https://codspeed.io/badge.json)](https://codspeed.io/hckhanh/format-prompt?utm_source=badge)
+[![better-npm](https://img.shields.io/badge/registry-better--npm-blue)](https://better-npm.com)
 
 ## Installation
 
