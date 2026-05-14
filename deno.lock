@@ -18,11 +18,11 @@
     "npm:@vitest/coverage-v8@4.1.4": "4.1.4_vitest@4.1.4_@types+node@25.6.0_vite@7.3.3__@types+node@25.6.0",
     "npm:babel-plugin-react-compiler@1.0.0": "1.0.0",
     "npm:baseline-browser-mapping@2.10.17": "2.10.17",
-    "npm:fumadocs-core@16.6.9": "16.6.9_@mdx-js+mdx@3.1.1_@types+react@19.2.14_lucide-react@0.575.0__react@19.2.5_next@16.2.6__babel-plugin-react-compiler@1.0.0__react@19.2.5__react-dom@19.2.5___react@19.2.5_react@19.2.5_react-dom@19.2.5__react@19.2.5_zod@4.4.3_babel-plugin-react-compiler@1.0.0",
-    "npm:fumadocs-mdx@14.2.9": "14.2.9_@types+mdx@2.0.13_@types+react@19.2.14_fumadocs-core@16.6.9__@mdx-js+mdx@3.1.1__@types+react@19.2.14__lucide-react@0.575.0___react@19.2.5__next@16.2.6___babel-plugin-react-compiler@1.0.0___react@19.2.5___react-dom@19.2.5____react@19.2.5__react@19.2.5__react-dom@19.2.5___react@19.2.5__zod@4.4.3__babel-plugin-react-compiler@1.0.0_next@16.2.6__babel-plugin-react-compiler@1.0.0__react@19.2.5__react-dom@19.2.5___react@19.2.5_react@19.2.5_vite@7.3.3__@types+node@25.6.0_@types+node@25.6.0_babel-plugin-react-compiler@1.0.0_lucide-react@0.575.0__react@19.2.5_react-dom@19.2.5__react@19.2.5",
+    "npm:fumadocs-core@16.6.9": "16.6.9_@types+react@19.2.14_lucide-react@0.577.0__react@19.2.5_next@16.2.6__babel-plugin-react-compiler@1.0.0__react@19.2.5__react-dom@19.2.5___react@19.2.5_react@19.2.5_react-dom@19.2.5__react@19.2.5",
+    "npm:fumadocs-mdx@14.2.9": "14.2.9_@types+mdx@2.0.13_@types+react@19.2.14_fumadocs-core@16.6.9__@types+react@19.2.14__lucide-react@0.577.0___react@19.2.5__next@16.2.6___babel-plugin-react-compiler@1.0.0___react@19.2.5___react-dom@19.2.5____react@19.2.5__react@19.2.5__react-dom@19.2.5___react@19.2.5_next@16.2.6__babel-plugin-react-compiler@1.0.0__react@19.2.5__react-dom@19.2.5___react@19.2.5_react@19.2.5_lucide-react@0.577.0__react@19.2.5",
     "npm:fumadocs-ui@16.6.9": "16.6.9_@takumi-rs+image-response@0.73.1_@types+react@19.2.14_fumadocs-core@16.6.9__@mdx-js+mdx@3.1.1__@types+react@19.2.14__lucide-react@0.575.0___react@19.2.5__next@16.2.6___babel-plugin-react-compiler@1.0.0___react@19.2.5___react-dom@19.2.5____react@19.2.5__react@19.2.5__react-dom@19.2.5___react@19.2.5__zod@4.4.3__babel-plugin-react-compiler@1.0.0_next@16.2.6__babel-plugin-react-compiler@1.0.0__react@19.2.5__react-dom@19.2.5___react@19.2.5_react@19.2.5_react-dom@19.2.5__react@19.2.5_@types+react-dom@19.2.3__@types+react@19.2.14_babel-plugin-react-compiler@1.0.0_tailwindcss@4.2.2",
     "npm:knip@5.88.1": "5.88.1_@types+node@25.6.0_typescript@5.9.3_@emnapi+core@1.10.0_@emnapi+runtime@1.10.0",
-    "npm:lucide-react@0.575.0": "0.575.0_react@19.2.5",
+    "npm:lucide-react@0.577.0": "0.577.0_react@19.2.5",
     "npm:next@16.2.6": "16.2.6_babel-plugin-react-compiler@1.0.0_react@19.2.5_react-dom@19.2.5__react@19.2.5",
     "npm:postcss@8.5.10": "8.5.10",
     "npm:react-dom@19.2.5": "19.2.5_react@19.2.5",
@@ -2724,7 +2724,6 @@
         "hast-util-to-estree",
         "hast-util-to-jsx-runtime",
         "image-size",
-        "lucide-react",
         "mdast-util-mdx",
         "mdast-util-to-markdown",
         "negotiator",
@@ -2747,14 +2746,57 @@
       "optionalPeers": [
         "@mdx-js/mdx",
         "@types/react",
-        "lucide-react",
         "next",
         "react",
         "react-dom",
         "zod"
       ]
     },
-    "fumadocs-mdx@14.2.9_@types+mdx@2.0.13_@types+react@19.2.14_fumadocs-core@16.6.9__@mdx-js+mdx@3.1.1__@types+react@19.2.14__lucide-react@0.575.0___react@19.2.5__next@16.2.6___babel-plugin-react-compiler@1.0.0___react@19.2.5___react-dom@19.2.5____react@19.2.5__react@19.2.5__react-dom@19.2.5___react@19.2.5__zod@4.4.3__babel-plugin-react-compiler@1.0.0_next@16.2.6__babel-plugin-react-compiler@1.0.0__react@19.2.5__react-dom@19.2.5___react@19.2.5_react@19.2.5_vite@7.3.3__@types+node@25.6.0_@types+node@25.6.0_babel-plugin-react-compiler@1.0.0_lucide-react@0.575.0__react@19.2.5_react-dom@19.2.5__react@19.2.5": {
+    "fumadocs-core@16.6.9_@types+react@19.2.14_lucide-react@0.577.0__react@19.2.5_next@16.2.6__babel-plugin-react-compiler@1.0.0__react@19.2.5__react-dom@19.2.5___react@19.2.5_react@19.2.5_react-dom@19.2.5__react@19.2.5": {
+      "integrity": "sha512-zSDk9tAP7z3de1Zzc1weVOmXtO+zqgus9mSlkzkxbQQgA99liGZlPujImSbNMMVn47h6xJk2zfv/CV3cuDrQ0A==",
+      "dependencies": [
+        "@formatjs/intl-localematcher",
+        "@mdx-js/mdx",
+        "@orama/orama",
+        "@shikijs/rehype",
+        "@shikijs/transformers",
+        "@types/react",
+        "estree-util-value-to-estree",
+        "github-slugger",
+        "hast-util-to-estree",
+        "hast-util-to-jsx-runtime",
+        "image-size",
+        "lucide-react@0.577.0_react@19.2.5",
+        "mdast-util-mdx",
+        "mdast-util-to-markdown",
+        "negotiator",
+        "next",
+        "npm-to-yarn",
+        "path-to-regexp",
+        "react",
+        "react-dom",
+        "remark",
+        "remark-gfm",
+        "remark-rehype",
+        "scroll-into-view-if-needed",
+        "shiki",
+        "tinyglobby",
+        "unified",
+        "unist-util-visit",
+        "vfile",
+        "zod"
+      ],
+      "optionalPeers": [
+        "@mdx-js/mdx",
+        "@types/react",
+        "lucide-react@0.577.0_react@19.2.5",
+        "next",
+        "react",
+        "react-dom",
+        "zod"
+      ]
+    },
+    "fumadocs-mdx@14.2.9_@types+mdx@2.0.13_@types+react@19.2.14_fumadocs-core@16.6.9__@types+react@19.2.14__lucide-react@0.577.0___react@19.2.5__next@16.2.6___babel-plugin-react-compiler@1.0.0___react@19.2.5___react-dom@19.2.5____react@19.2.5__react@19.2.5__react-dom@19.2.5___react@19.2.5_next@16.2.6__babel-plugin-react-compiler@1.0.0__react@19.2.5__react-dom@19.2.5___react@19.2.5_react@19.2.5_lucide-react@0.577.0__react@19.2.5": {
       "integrity": "sha512-5QbFj3KyNgojjpUsD5Xw2W+ofN9l1WiIxzthwFzGoHOLIoJkdCN4AjHcINC+YSo89d/oZlradrrKRd3uHwVKBA==",
       "dependencies": [
         "@mdx-js/mdx",
@@ -2764,7 +2806,7 @@
         "chokidar",
         "esbuild",
         "estree-util-value-to-estree",
-        "fumadocs-core",
+        "fumadocs-core@16.6.9_@types+react@19.2.14_lucide-react@0.577.0__react@19.2.5_next@16.2.6__babel-plugin-react-compiler@1.0.0__react@19.2.5__react-dom@19.2.5___react@19.2.5_react@19.2.5_react-dom@19.2.5__react@19.2.5",
         "js-yaml@4.1.1",
         "mdast-util-mdx",
         "mdast-util-to-markdown",
@@ -2807,8 +2849,8 @@
         "@takumi-rs/image-response",
         "@types/react",
         "class-variance-authority",
-        "fumadocs-core",
-        "lucide-react",
+        "fumadocs-core@16.6.9_@mdx-js+mdx@3.1.1_@types+react@19.2.14_lucide-react@0.575.0__react@19.2.5_next@16.2.6__babel-plugin-react-compiler@1.0.0__react@19.2.5__react-dom@19.2.5___react@19.2.5_react@19.2.5_react-dom@19.2.5__react@19.2.5_zod@4.4.3_babel-plugin-react-compiler@1.0.0",
+        "lucide-react@0.575.0_react@19.2.5",
         "motion",
         "next",
         "next-themes",
@@ -3273,6 +3315,12 @@
     },
     "lucide-react@0.575.0_react@19.2.5": {
       "integrity": "sha512-VuXgKZrk0uiDlWjGGXmKV6MSk9Yy4l10qgVvzGn2AWBx1Ylt0iBexKOAoA6I7JO3m+M9oeovJd3yYENfkUbOeg==",
+      "dependencies": [
+        "react"
+      ]
+    },
+    "lucide-react@0.577.0_react@19.2.5": {
+      "integrity": "sha512-4LjoFv2eEPwYDPg/CUdBJQSDfPyzXCRrVW1X7jrx/trgxnxkHFjnVZINbzvzxjN70dxychOfg+FTYwBiS3pQ5A==",
       "dependencies": [
         "react"
       ]
@@ -4983,7 +5031,7 @@
             "npm:fumadocs-core@16.6.9",
             "npm:fumadocs-mdx@14.2.9",
             "npm:fumadocs-ui@16.6.9",
-            "npm:lucide-react@0.575.0",
+            "npm:lucide-react@0.577.0",
             "npm:next@16.2.6",
             "npm:postcss@8.5.10",
             "npm:react-dom@19.2.5",
