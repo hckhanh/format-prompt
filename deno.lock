@@ -6,7 +6,7 @@
     "npm:@biomejs/biome@2.4.11": "2.4.11",
     "npm:@changesets/cli@2.30.0": "2.30.0_@types+node@25.6.0",
     "npm:@changesets/config@3.1.3": "3.1.3",
-    "npm:@codspeed/vitest-plugin@5.2.0": "5.2.0_tinybench@2.9.0_vite@7.3.3_vitest@4.1.4_@types+node@25.6.0_@vitest+coverage-v8@4.1.4",
+    "npm:@codspeed/vitest-plugin@5.2.0": "5.2.0_vite@7.3.3_vitest@4.1.11_@types+node@25.6.0_@vitest+coverage-v8@4.1.4",
     "npm:@tailwindcss/postcss@4.2.2": "4.2.2",
     "npm:@takumi-rs/image-response@0.73.1": "0.73.1",
     "npm:@toon-format/toon@2.3.1": "2.3.1",
@@ -19,7 +19,7 @@
     "npm:babel-plugin-react-compiler@1.0.0": "1.0.0",
     "npm:baseline-browser-mapping@2.10.17": "2.10.17",
     "npm:fumadocs-core@16.6.9": "16.6.9_@types+react@19.2.14_lucide-react@0.575.0_next@16.2.11_react@19.2.5_react-dom@19.2.5_babel-plugin-react-compiler@1.0.0",
-    "npm:fumadocs-mdx@14.2.9": "14.2.9_@types+mdx@2.0.13_@types+react@19.2.14_fumadocs-core@16.6.9_next@16.2.11_react@19.2.5_babel-plugin-react-compiler@1.0.0_react-dom@19.2.5",
+    "npm:fumadocs-mdx@14.2.9": "14.2.9_@types+mdx@2.0.13_@types+react@19.2.14_fumadocs-core@16.6.9_next@16.2.11_react@19.2.5_vite@7.3.3",
     "npm:fumadocs-ui@16.6.9": "16.6.9_@takumi-rs+image-response@0.73.1_@types+react@19.2.14_fumadocs-core@16.6.9_next@16.2.11_react@19.2.5_react-dom@19.2.5_babel-plugin-react-compiler@1.0.0",
     "npm:knip@5.88.1": "5.88.1_@types+node@25.6.0_typescript@5.9.3_@emnapi+core@1.10.0_@emnapi+runtime@1.10.0",
     "npm:lucide-react@0.575.0": "0.575.0_react@19.2.5",
@@ -34,7 +34,7 @@
     "npm:tailwindcss@4.2.2": "4.2.2",
     "npm:tsdown@0.21.7": "0.21.7_typescript@5.9.3_@emnapi+core@1.10.0_@emnapi+runtime@1.10.0",
     "npm:typescript@5.9.3": "5.9.3",
-    "npm:vitest@4.1.4": "4.1.4_@types+node@25.6.0_@vitest+coverage-v8@4.1.4_vite@7.3.3"
+    "npm:vitest@4.1.11": "4.1.11_@types+node@25.6.0_@vitest+coverage-v8@4.1.4_vite@7.3.3"
   },
   "jsr": {
     "@hckhanh/fast-url@6.0.2": {
@@ -356,13 +356,13 @@
         "node-gyp-build"
       ]
     },
-    "@codspeed/vitest-plugin@5.2.0_tinybench@2.9.0_vite@7.3.3_vitest@4.1.4_@types+node@25.6.0_@vitest+coverage-v8@4.1.4": {
+    "@codspeed/vitest-plugin@5.2.0_vite@7.3.3_vitest@4.1.11_@types+node@25.6.0_@vitest+coverage-v8@4.1.4": {
       "integrity": "sha512-soXKIQBqJzjVQyWRwe2HNfhCaBgxhG25m8+PI3F5zFFsV3FQxMJXHsMECNtrgm+SRiCiWv/OFTcfCMZRy4nKtw==",
       "dependencies": [
         "@codspeed/core",
         "tinybench",
         "vite",
-        "vitest"
+        "vitest@4.1.11_@types+node@25.6.0_@vitest+coverage-v8@4.1.4_vite@7.3.3"
       ]
     },
     "@emnapi/core@1.10.0": {
@@ -2124,7 +2124,7 @@
       "integrity": "sha512-x7FptB5oDruxNPDNY2+S8tCh0pcq7ymCe1gTHcsp733jYjrJl8V1gMUlVysuCD9Kz46Xz9t1akkv08dPcYDs1w==",
       "dependencies": [
         "@bcoe/v8-coverage",
-        "@vitest/utils",
+        "@vitest/utils@4.1.4",
         "ast-v8-to-istanbul",
         "istanbul-lib-coverage",
         "istanbul-lib-report",
@@ -2133,7 +2133,18 @@
         "obug",
         "std-env",
         "tinyrainbow",
-        "vitest"
+        "vitest@4.1.4_@types+node@25.6.0_@vitest+coverage-v8@4.1.4_vite@7.3.3"
+      ]
+    },
+    "@vitest/expect@4.1.11": {
+      "integrity": "sha512-VX2x5vNJXET47KAFzwERI+KRMtTTCSWTfSMKsW7JsUsXV4psq++e3DvZpuTDOpHcxytiDs6p2nhVb2tVDiiUYw==",
+      "dependencies": [
+        "@standard-schema/spec",
+        "@types/chai",
+        "@vitest/spy@4.1.11",
+        "@vitest/utils@4.1.11",
+        "chai",
+        "tinyrainbow"
       ]
     },
     "@vitest/expect@4.1.4": {
@@ -2141,16 +2152,16 @@
       "dependencies": [
         "@standard-schema/spec",
         "@types/chai",
-        "@vitest/spy",
-        "@vitest/utils",
+        "@vitest/spy@4.1.4",
+        "@vitest/utils@4.1.4",
         "chai",
         "tinyrainbow"
       ]
     },
-    "@vitest/mocker@4.1.4_vite@7.3.3_@types+node@25.6.0": {
-      "integrity": "sha512-R9HTZBhW6yCSGbGQnDnH3QHfJxokKN4KB+Yvk9Q1le7eQNYwiCyKxmLmurSpFy6BzJanSLuEUDrD+j97Q+ZLPg==",
+    "@vitest/mocker@4.1.11_vite@7.3.3": {
+      "integrity": "sha512-2XJVD55d1o5AZous5CCGKS74g/riOj9odEt2bQpCVZeblHyHdnMeFl4jl0XjU21stf4mbjUkew2eXQZt65g5CQ==",
       "dependencies": [
-        "@vitest/spy",
+        "@vitest/spy@4.1.11",
         "estree-walker",
         "magic-string",
         "vite"
@@ -2159,35 +2170,80 @@
         "vite"
       ]
     },
+    "@vitest/mocker@4.1.4_vite@7.3.3_@types+node@25.6.0": {
+      "integrity": "sha512-R9HTZBhW6yCSGbGQnDnH3QHfJxokKN4KB+Yvk9Q1le7eQNYwiCyKxmLmurSpFy6BzJanSLuEUDrD+j97Q+ZLPg==",
+      "dependencies": [
+        "@vitest/spy@4.1.4",
+        "estree-walker",
+        "magic-string",
+        "vite"
+      ],
+      "optionalPeers": [
+        "vite"
+      ]
+    },
+    "@vitest/pretty-format@4.1.11": {
+      "integrity": "sha512-yiZzPbGTS9Sr/JpFl8zHrcIkAofNbFV6k21vIgQN/cY/oxZeXhJv5sc/MBJ5jFKWmWs+oJHw0UXLZjmf931+Vw==",
+      "dependencies": [
+        "tinyrainbow"
+      ]
+    },
     "@vitest/pretty-format@4.1.4": {
       "integrity": "sha512-ddmDHU0gjEUyEVLxtZa7xamrpIefdEETu3nZjWtHeZX4QxqJ7tRxSteHVXJOcr8jhiLoGAhkK4WJ3WqBpjx42A==",
       "dependencies": [
         "tinyrainbow"
       ]
     },
+    "@vitest/runner@4.1.11": {
+      "integrity": "sha512-LztvUgdwMNJMIkj3hQnnxiC2Xy1zNxq928W/xhjCLaNCzqTZOudjwbQf6v9IntZGPw132i2Lq2rgTRZHD3JHNw==",
+      "dependencies": [
+        "@vitest/utils@4.1.11",
+        "pathe"
+      ]
+    },
     "@vitest/runner@4.1.4": {
       "integrity": "sha512-xTp7VZ5aXP5ZJrn15UtJUWlx6qXLnGtF6jNxHepdPHpMfz/aVPx+htHtgcAL2mDXJgKhpoo2e9/hVJsIeFbytQ==",
       "dependencies": [
-        "@vitest/utils",
+        "@vitest/utils@4.1.4",
+        "pathe"
+      ]
+    },
+    "@vitest/snapshot@4.1.11": {
+      "integrity": "sha512-pN7ikn1ON7h8ee4gIAp4AzyK+zBtJPzVbqOgu5LCEh4VaJVbPQcgYQYJIMGQPXVeJJq1fnfazis7a5pFNPahog==",
+      "dependencies": [
+        "@vitest/pretty-format@4.1.11",
+        "@vitest/utils@4.1.11",
+        "magic-string",
         "pathe"
       ]
     },
     "@vitest/snapshot@4.1.4": {
       "integrity": "sha512-MCjCFgaS8aZz+m5nTcEcgk/xhWv0rEH4Yl53PPlMXOZ1/Ka2VcZU6CJ+MgYCZbcJvzGhQRjVrGQNZqkGPttIKw==",
       "dependencies": [
-        "@vitest/pretty-format",
-        "@vitest/utils",
+        "@vitest/pretty-format@4.1.4",
+        "@vitest/utils@4.1.4",
         "magic-string",
         "pathe"
       ]
     },
+    "@vitest/spy@4.1.11": {
+      "integrity": "sha512-apNa/prQy2qCeywhnixOHPRCgGNhvg7T4Dapfl1GahLp/R+uhBm5cPyFoNVyqsNd2h1nJxL6BqqdIjiABL60YA=="
+    },
     "@vitest/spy@4.1.4": {
       "integrity": "sha512-XxNdAsKW7C+FLydqFJLb5KhJtl3PGCMmYwFRfhvIgxJvLSXhhVI1zM8f1qD3Zg7RCjTSzDVyct6sghs9UEgBEQ=="
+    },
+    "@vitest/utils@4.1.11": {
+      "integrity": "sha512-zTCVGpyFsGWBhllOyKlTw/vnr6D9qxsfSDyfbyZmTyjHw5N/VuvzHpHoQjm2ZJzn4RJgx5w4r7V0er69CmLgPQ==",
+      "dependencies": [
+        "@vitest/pretty-format@4.1.11",
+        "convert-source-map",
+        "tinyrainbow"
+      ]
     },
     "@vitest/utils@4.1.4": {
       "integrity": "sha512-13QMT+eysM5uVGa1rG4kegGYNp6cnQcsTc67ELFbhNLQO+vgsygtYJx2khvdt4gVQqSSpC/KT5FZZxUpP3Oatw==",
       "dependencies": [
-        "@vitest/pretty-format",
+        "@vitest/pretty-format@4.1.4",
         "convert-source-map",
         "tinyrainbow"
       ]
@@ -2754,7 +2810,7 @@
         "zod"
       ]
     },
-    "fumadocs-mdx@14.2.9_@types+mdx@2.0.13_@types+react@19.2.14_fumadocs-core@16.6.9_next@16.2.11_react@19.2.5_babel-plugin-react-compiler@1.0.0_react-dom@19.2.5": {
+    "fumadocs-mdx@14.2.9_@types+mdx@2.0.13_@types+react@19.2.14_fumadocs-core@16.6.9_next@16.2.11_react@19.2.5_vite@7.3.3": {
       "integrity": "sha512-5QbFj3KyNgojjpUsD5Xw2W+ofN9l1WiIxzthwFzGoHOLIoJkdCN4AjHcINC+YSo89d/oZlradrrKRd3uHwVKBA==",
       "dependencies": [
         "@mdx-js/mdx",
@@ -4876,18 +4932,50 @@
       ],
       "bin": true
     },
+    "vitest@4.1.11_@types+node@25.6.0_@vitest+coverage-v8@4.1.4_vite@7.3.3": {
+      "integrity": "sha512-fhACrNXUidIbGSBr5FlbuBkO7VWC1ZyLl0DO4CU2DrQoAPxX84Ysxs+HeGQpii5lZWV1Q4gBZTTu49mF+A6Edw==",
+      "dependencies": [
+        "@types/node@25.6.0",
+        "@vitest/coverage-v8",
+        "@vitest/expect@4.1.11",
+        "@vitest/mocker@4.1.11_vite@7.3.3",
+        "@vitest/pretty-format@4.1.11",
+        "@vitest/runner@4.1.11",
+        "@vitest/snapshot@4.1.11",
+        "@vitest/spy@4.1.11",
+        "@vitest/utils@4.1.11",
+        "es-module-lexer",
+        "expect-type",
+        "magic-string",
+        "obug",
+        "pathe",
+        "picomatch@4.0.4",
+        "std-env",
+        "tinybench",
+        "tinyexec",
+        "tinyglobby",
+        "tinyrainbow",
+        "vite",
+        "why-is-node-running"
+      ],
+      "optionalPeers": [
+        "@types/node@25.6.0",
+        "@vitest/coverage-v8"
+      ],
+      "bin": true
+    },
     "vitest@4.1.4_@types+node@25.6.0_@vitest+coverage-v8@4.1.4_vite@7.3.3": {
       "integrity": "sha512-tFuJqTxKb8AvfyqMfnavXdzfy3h3sWZRWwfluGbkeR7n0HUev+FmNgZ8SDrRBTVrVCjgH5cA21qGbCffMNtWvg==",
       "dependencies": [
         "@types/node@25.6.0",
         "@vitest/coverage-v8",
-        "@vitest/expect",
-        "@vitest/mocker",
-        "@vitest/pretty-format",
-        "@vitest/runner",
-        "@vitest/snapshot",
-        "@vitest/spy",
-        "@vitest/utils",
+        "@vitest/expect@4.1.4",
+        "@vitest/mocker@4.1.4_vite@7.3.3_@types+node@25.6.0",
+        "@vitest/pretty-format@4.1.4",
+        "@vitest/runner@4.1.4",
+        "@vitest/snapshot@4.1.4",
+        "@vitest/spy@4.1.4",
+        "@vitest/utils@4.1.4",
         "es-module-lexer",
         "expect-type",
         "magic-string",
@@ -4964,7 +5052,7 @@
         "npm:syncpack@14.3.0",
         "npm:tsdown@0.21.7",
         "npm:typescript@5.9.3",
-        "npm:vitest@4.1.4"
+        "npm:vitest@4.1.11"
       ]
     },
     "members": {
