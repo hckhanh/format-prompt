@@ -17,7 +17,7 @@
     "npm:@types/react@19.2.14": "19.2.14",
     "npm:@vitest/coverage-v8@4.1.4": "4.1.4_vitest@4.1.4_@types+node@25.6.0_vite@7.3.3",
     "npm:babel-plugin-react-compiler@1.0.0": "1.0.0",
-    "npm:baseline-browser-mapping@2.10.17": "2.10.17",
+    "npm:baseline-browser-mapping@2.11.0": "2.11.0",
     "npm:fumadocs-core@16.6.9": "16.6.9_@types+react@19.2.14_lucide-react@0.575.0_next@16.2.11_react@19.2.5_react-dom@19.2.5_babel-plugin-react-compiler@1.0.0",
     "npm:fumadocs-mdx@14.2.9": "14.2.9_@types+mdx@2.0.13_@types+react@19.2.14_fumadocs-core@16.6.9_next@16.2.11_react@19.2.5_vite@7.3.3",
     "npm:fumadocs-ui@16.6.9": "16.6.9_@takumi-rs+image-response@0.73.1_@types+react@19.2.14_fumadocs-core@16.6.9_next@16.2.11_react@19.2.5_react-dom@19.2.5_babel-plugin-react-compiler@1.0.0",
@@ -2328,8 +2328,8 @@
     "bail@2.0.2": {
       "integrity": "sha512-0xO6mYd7JB2YesxDKplafRpsiOzPt9V02ddPCLbY1xYGPOX24NTyN50qnUxgCPcSoYMhKpAuBTjQoRZCAkUDRw=="
     },
-    "baseline-browser-mapping@2.10.17": {
-      "integrity": "sha512-HdrkN8eVG2CXxeifv/VdJ4A4RSra1DTW8dc/hdxzhGHN8QePs6gKaWM9pHPcpCoxYZJuOZ8drHmbdpLHjCYjLA==",
+    "baseline-browser-mapping@2.11.0": {
+      "integrity": "sha512-oCu2wfipvX3AePSgmOuKkIywOu+8n9psz7hXYmk56ghpu3+7KzNIBopaOs4c9BrtdnTtW30unG9GTfHo7EwERQ==",
       "bin": true
     },
     "better-path-resolve@1.0.0": {
@@ -5067,7 +5067,7 @@
             "npm:@types/react-dom@19.2.3",
             "npm:@types/react@19.2.14",
             "npm:babel-plugin-react-compiler@1.0.0",
-            "npm:baseline-browser-mapping@2.10.17",
+            "npm:baseline-browser-mapping@2.11.0",
             "npm:fumadocs-core@16.6.9",
             "npm:fumadocs-mdx@14.2.9",
             "npm:fumadocs-ui@16.6.9",
