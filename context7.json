@@ -1,4 +1,14 @@
 {
+  "$schema": "https://context7.com/schema/context7.json",
+  "projectTitle": "format-prompt",
+  "description": "A utility to format prompts for a cleaner presentation and optimal token usage.",
+  "folders": [],
+  "excludeFolders": ["node_modules", "dist", "coverage"],
+  "excludeFiles": ["CHANGELOG.md"],
+  "rules": [
+    "Documentation is published at https://docs.khanh.id/format-prompt.",
+    "Format prompt template literals with the prompt tag from format-prompt."
+  ],
   "url": "https://context7.com/hckhanh/format-prompt",
   "public_key": "pk_5wVhL0PTjFlXiZPBk058C"
 }
