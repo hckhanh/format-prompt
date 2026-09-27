@@ -1,5 +1,9 @@
 # format-prompt! [![NPM Downloads](https://img.shields.io/npm/dw/format-prompt)](https://www.npmjs.com/package/format-prompt) [![JSR](https://jsr.io/badges/@hckhanh/format-prompt/weekly-downloads)](https://jsr.io/@hckhanh/format-prompt)
 
+<p align="center">
+  <img src="docs/images/logo.svg" alt="format-prompt" width="128" />
+</p>
+
 A utility to format prompts for a cleaner presentation and optimal token usage. Removes unused spaces and line breaks, and supports template literals.
 
 [![Test](https://github.com/hckhanh/format-prompt/actions/workflows/test.yml/badge.svg)](https://github.com/hckhanh/format-prompt/actions/workflows/test.yml)
