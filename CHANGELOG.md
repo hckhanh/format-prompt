@@ -1,5 +1,11 @@
 # format-prompt
 
+## 1.0.3
+
+### Patch Changes
+
+- Point documentation at https://docs.khanh.id/format-prompt and publish the changes already on main since 1.0.2.
+
 ## 1.0.2
 
 ### Patch Changes

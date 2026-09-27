@@ -1,13 +1,13 @@
 {
   "name": "format-prompt",
   "description": "A utility to format prompts for a cleaner presentation and optimal token usage",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": {
     "name": "Khánh Hoàng",
     "email": "hi@khanh.id",
     "url": "https://www.khanh.id"
   },
-  "homepage": "https://prompt.khanh.id",
+  "homepage": "https://docs.khanh.id/format-prompt",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hckhanh/format-prompt.git"
@@ -54,8 +54,7 @@
     "vitest": "4.1.11"
   },
   "workspaces": [
-    ".",
-    "docs"
+    "."
   ],
   "files": [
     "dist"
