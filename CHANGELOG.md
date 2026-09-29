@@ -1,5 +1,11 @@
 # format-prompt
 
+## 1.0.4
+
+### Patch Changes
+
+- fc54811: Link the documentation site from the readme.
+
 ## 1.0.3
 
 ### Patch Changes
