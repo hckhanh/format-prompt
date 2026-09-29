@@ -6,6 +6,10 @@
 
 A utility to format prompts for a cleaner presentation and optimal token usage. Removes unused spaces and line breaks, and supports template literals.
 
+## Documentation
+
+**[https://docs.khanh.id/format-prompt](https://docs.khanh.id/format-prompt)**
+
 [![Test](https://github.com/hckhanh/format-prompt/actions/workflows/test.yml/badge.svg)](https://github.com/hckhanh/format-prompt/actions/workflows/test.yml)
 [![codecov](https://codecov.io/github/hckhanh/format-prompt/graph/badge.svg?token=6W7S96H6OT)](https://codecov.io/github/hckhanh/format-prompt)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=hckhanh_format-prompt&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=hckhanh_format-prompt)
