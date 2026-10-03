@@ -6,17 +6,17 @@
     "npm:@biomejs/biome@2.5.14": "2.5.14",
     "npm:@changesets/cli@2.31.1": "2.31.1_@types+node@25.9.8",
     "npm:@changesets/config@3.1.4": "3.1.4",
-    "npm:@codspeed/vitest-plugin@5.7.1": "5.7.1_tinybench@2.9.0_vite@7.3.6_vitest@4.1.11__@types+node@25.9.8__@vitest+coverage-v8@4.1.11__vite@7.3.6_@types+node@25.9.8",
+    "npm:@codspeed/vitest-plugin@5.7.1": "5.7.1_tinybench@2.9.0_vite@7.3.6_vitest@4.1.11_@types+node@25.9.8",
     "npm:@toon-format/toon@2.3.1": "2.3.1",
     "npm:@types/bun@1.4.2": "1.4.2",
     "npm:@types/node@25.9.8": "25.9.8",
     "npm:@vitest/coverage-v8@4.1.11": "4.1.11_vitest@4.1.11_@types+node@25.9.8_vite@7.3.6",
-    "npm:knip@5.88.1": "5.88.1_@types+node@25.9.8_typescript@5.9.3",
+    "npm:knip@5.88.1": "5.88.1_@types+node@25.9.8_typescript@6.0.3",
     "npm:string-collapse-leading-whitespace@^7.1.0": "7.1.3",
     "npm:string-collapse-white-space@^11.1.0": "11.1.3",
     "npm:syncpack@14.3.1": "14.3.1",
-    "npm:tsdown@0.21.7": "0.21.7_typescript@5.9.3_@emnapi+core@1.10.0_@emnapi+runtime@1.10.0",
-    "npm:typescript@5.9.3": "5.9.3",
+    "npm:tsdown@0.21.7": "0.21.7_typescript@6.0.3",
+    "npm:typescript@6.0.3": "6.0.3",
     "npm:vitest@4.1.11": "4.1.11_@types+node@25.9.8_@vitest+coverage-v8@4.1.11_vite@7.3.6"
   },
   "jsr": {
@@ -324,7 +324,7 @@
         "stack-trace"
       ]
     },
-    "@codspeed/vitest-plugin@5.7.1_tinybench@2.9.0_vite@7.3.6_vitest@4.1.11__@types+node@25.9.8__@vitest+coverage-v8@4.1.11__vite@7.3.6_@types+node@25.9.8": {
+    "@codspeed/vitest-plugin@5.7.1_tinybench@2.9.0_vite@7.3.6_vitest@4.1.11_@types+node@25.9.8": {
       "integrity": "sha512-yKNqaYVxZZPJYkhVHpz30Oem4TUgcI+/IRDD9YHvcAgi0P42CL6TB/+qYjuFOWghFzTPrm3TUbNFoBsevSTbUA==",
       "dependencies": [
         "@codspeed/core",
@@ -1574,7 +1574,7 @@
         "graceful-fs"
       ]
     },
-    "knip@5.88.1_@types+node@25.9.8_typescript@5.9.3": {
+    "knip@5.88.1_@types+node@25.9.8_typescript@6.0.3": {
       "integrity": "sha512-tpy5o7zu1MjawVkLPuahymVJekYY3kYjvzcoInhIchgePxTlo+api90tBv2KfhAIe5uXh+mez1tAfmbv8/TiZg==",
       "dependencies": [
         "@nodelib/fs.walk",
@@ -1840,7 +1840,7 @@
     "rfdc@1.4.1": {
       "integrity": "sha512-q1b3N5QkRUWUl7iyylaaj3kOpIT0N2i9MqIEQXP73GVsN9cw3fdx8X63cEmWhJGi2PPCF23Ijp7ktmd39rawIA=="
     },
-    "rolldown-plugin-dts@0.23.2_rolldown@1.0.0-rc.12_typescript@5.9.3_@emnapi+core@1.10.0_@emnapi+runtime@1.10.0": {
+    "rolldown-plugin-dts@0.23.2_rolldown@1.0.0-rc.12_typescript@6.0.3": {
       "integrity": "sha512-PbSqLawLgZBGcOGT3yqWBGn4cX+wh2nt5FuBGdcMHyOhoukmjbhYAl8NT9sE4U38Cm9tqLOIQeOrvzeayM0DLQ==",
       "dependencies": [
         "@babel/generator",
@@ -1853,6 +1853,7 @@
         "get-tsconfig",
         "obug",
         "picomatch@4.0.4",
+        "rolldown@1.0.0-rc.12_@emnapi+core@1.10.0_@emnapi+runtime@1.10.0",
         "typescript"
       ],
       "optionalPeers": [
@@ -2125,7 +2126,7 @@
       "integrity": "sha512-L0Orpi8qGpRG//Nd+H90vFB+3iHnue1zSSGmNOOCh1GLJ7rUKVwV2HvijphGQS2UmhUZewS9VgvxYIdgr+fG1A==",
       "bin": true
     },
-    "tsdown@0.21.7_typescript@5.9.3_@emnapi+core@1.10.0_@emnapi+runtime@1.10.0": {
+    "tsdown@0.21.7_typescript@6.0.3": {
       "integrity": "sha512-ukKIxKQzngkWvOYJAyptudclkm4VQqbjq+9HF5K5qDO8GJsYtMh8gIRwicbnZEnvFPr6mquFwYAVZ8JKt3rY2g==",
       "dependencies": [
         "ansis",
@@ -2154,8 +2155,8 @@
     "tslib@2.8.1": {
       "integrity": "sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w=="
     },
-    "typescript@5.9.3": {
-      "integrity": "sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==",
+    "typescript@6.0.3": {
+      "integrity": "sha512-y2TvuxSZPDyQakkFRPZHKFm+KKVqIisdg9/CZwm9ftvKXLP8NRWj38/ODjNbr43SsoXqNuAisEf1GdCxqWcdBw==",
       "bin": true
     },
     "unbash@2.2.0": {
@@ -2281,7 +2282,7 @@
         "npm:string-collapse-white-space@^11.1.0",
         "npm:syncpack@14.3.1",
         "npm:tsdown@0.21.7",
-        "npm:typescript@5.9.3",
+        "npm:typescript@6.0.3",
         "npm:vitest@4.1.11"
       ]
     }
