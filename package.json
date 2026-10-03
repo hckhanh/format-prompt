@@ -39,7 +39,7 @@
     "string-collapse-white-space": "^11.1.0"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.4.11",
+    "@biomejs/biome": "2.5.14",
     "@changesets/cli": "2.30.0",
     "@changesets/config": "3.1.4",
     "@codspeed/vitest-plugin": "5.2.0",
