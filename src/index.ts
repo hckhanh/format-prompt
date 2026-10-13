@@ -3,6 +3,21 @@ import { collapse } from 'string-collapse-white-space'
 
 const startRegex = /^([\s\n\r]+)/
 const endRegex = /([\s\n\r]+)$/
+const formattedTemplates = new WeakMap<TemplateStringsArray, string[]>()
+
+function isStaticTemplate(strings: TemplateStringsArray): boolean {
+  if (!Array.isArray(strings) || !Object.isFrozen(strings)) {
+    return false
+  }
+  for (let i = 0; i < strings.length; i++) {
+    if (
+      typeof Object.getOwnPropertyDescriptor(strings, i)?.value !== 'string'
+    ) {
+      return false
+    }
+  }
+  return true
+}
 
 /**
  * Formats a string by collapsing internal whitespace while preserving leading and trailing whitespace.
@@ -97,9 +112,16 @@ export function prompt(
   strings: TemplateStringsArray,
   ...values: unknown[]
 ): string {
+  let formatted = formattedTemplates.get(strings)
+  if (!formatted && isStaticTemplate(strings)) {
+    // Native template parts are immutable and shared across calls at the same site.
+    formatted = strings.map(formatString)
+    formattedTemplates.set(strings, formatted)
+  }
+
   let promptString = ''
   for (let i = 0; i < strings.length; i++) {
-    promptString += formatString(strings[i])
+    promptString += formatted ? formatted[i] : formatString(strings[i])
     if (i < values.length) {
       promptString += String(values[i])
     }
