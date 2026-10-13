@@ -1,5 +1,11 @@
 # format-prompt
 
+## 1.0.5
+
+### Patch Changes
+
+- Preserve source module boundaries in the published ESM output with unbundle mode, while retaining the existing public exports and TypeScript declarations.
+
 ## 1.0.4
 
 ### Patch Changes
