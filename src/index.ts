@@ -51,7 +51,9 @@ function formatString(s: string): string {
       }).result
     : s
         .trim()
-        .replace(/^[ \t]+|[ \t]+$/gm, '')
+        .split('\n')
+        .map((line) => line.trim())
+        .join('\n')
         .replace(/ {2,}/g, ' ')
         .replace(/\n{3,}/g, '\n\n')
   return collWhitespace(start + formatted + end, 2)

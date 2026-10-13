@@ -55,6 +55,13 @@ describe('prompt', () => {
     expect(prompt`  Before   ${value}   After  `).toBe(`Before ${value} After`)
   })
 
+  it('handles long tab runs while preserving interior tabs', () => {
+    const tabs = '\t'.repeat(10_000)
+    const input = `${tabs}Start${tabs}end\n${tabs}Next${tabs}`
+    const strings = Object.assign([input], { raw: [input] })
+    expect(prompt(strings)).toBe(`Start${tabs}end\nNext`)
+  })
+
   it('should remove leading and trailing whitespace', () => {
     const result = prompt`
       Hello world
