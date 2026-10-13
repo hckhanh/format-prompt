@@ -115,7 +115,10 @@ export function prompt(
   let formatted = formattedTemplates.get(strings)
   if (!formatted && isStaticTemplate(strings)) {
     // Native template parts are immutable and shared across calls at the same site.
-    formatted = strings.map(formatString)
+    formatted = new Array<string>(strings.length)
+    for (let i = 0; i < strings.length; i++) {
+      formatted[i] = formatString(strings[i])
+    }
     formattedTemplates.set(strings, formatted)
   }
 

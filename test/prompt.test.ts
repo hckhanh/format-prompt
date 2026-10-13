@@ -32,6 +32,14 @@ describe('prompt', () => {
     expect(prompt(strings)).toBe('Second')
   })
 
+  it('formats frozen arrays without invoking overridden array methods', () => {
+    const strings = Object.assign(['  Hello    world  '], { raw: [''] })
+    Object.defineProperty(strings, 'map', { value: () => ['wrong'] })
+    Object.freeze(strings)
+    expect(prompt(strings)).toBe('Hello world')
+    expect(prompt(strings)).toBe('Hello world')
+  })
+
   it('should remove leading and trailing whitespace', () => {
     const result = prompt`
       Hello world
