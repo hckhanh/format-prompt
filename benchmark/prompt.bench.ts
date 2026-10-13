@@ -78,4 +78,20 @@ describe('prompt formatting', () => {
   bench('empty prompt', () => {
     prompt``
   })
+
+  bench('first use of a multiline template', () => {
+    const strings = Object.freeze(
+      Object.assign(['  Hello\n    world  '], {
+        raw: Object.freeze(['  Hello\n    world  ']),
+      }),
+    )
+    prompt(strings)
+  })
+
+  bench('mutable template parts', () => {
+    const strings = Object.assign(['Hello  ', '  world'], {
+      raw: ['Hello  ', '  world'],
+    })
+    prompt(strings, 'reader')
+  })
 })
