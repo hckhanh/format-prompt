@@ -34,6 +34,10 @@ const uncommonWhitespaceRegex = /[^\S \t\n]/
  * ```
  */
 function formatString(s: string): string {
+  if (s === '') {
+    return s
+  }
+
   const start = startRegex.exec(s)?.[0] ?? ''
   const end = endRegex.exec(s)?.[0] ?? ''
 
