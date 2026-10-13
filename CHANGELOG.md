@@ -1,5 +1,11 @@
 # format-prompt
 
+## 2.0.0
+
+### Major Changes
+
+- 637b3d3: Improve prompt whitespace formatting performance while preserving interpolation and Unicode whitespace behavior. Trim lines without regular expression backtracking on long tab runs.
+
 ## 1.0.5
 
 ### Patch Changes
