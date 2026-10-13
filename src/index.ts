@@ -3,21 +3,7 @@ import { collapse } from 'string-collapse-white-space'
 
 const startRegex = /^([\s\n\r]+)/
 const endRegex = /([\s\n\r]+)$/
-const formattedTemplates = new WeakMap<TemplateStringsArray, string[]>()
-
-function isStaticTemplate(strings: TemplateStringsArray): boolean {
-  if (!Array.isArray(strings) || !Object.isFrozen(strings)) {
-    return false
-  }
-  for (let i = 0; i < strings.length; i++) {
-    if (
-      typeof Object.getOwnPropertyDescriptor(strings, i)?.value !== 'string'
-    ) {
-      return false
-    }
-  }
-  return true
-}
+const uncommonWhitespaceRegex = /[^\S \t\n]/
 
 /**
  * Formats a string by collapsing internal whitespace while preserving leading and trailing whitespace.
@@ -51,12 +37,19 @@ function formatString(s: string): string {
   const start = startRegex.exec(s)?.[0] ?? ''
   const end = endRegex.exec(s)?.[0] ?? ''
 
-  const formatted = collapse(s, {
-    trimnbsp: true,
-    trimLines: true,
-    removeEmptyLines: true,
-    limitConsecutiveEmptyLinesTo: 1,
-  }).result
+  // Keep the dependency's handling of carriage returns and Unicode whitespace.
+  const formatted = uncommonWhitespaceRegex.test(s)
+    ? collapse(s, {
+        trimnbsp: true,
+        trimLines: true,
+        removeEmptyLines: true,
+        limitConsecutiveEmptyLinesTo: 1,
+      }).result
+    : s
+        .trim()
+        .replace(/^[ \t]+|[ \t]+$/gm, '')
+        .replace(/ {2,}/g, ' ')
+        .replace(/\n{3,}/g, '\n\n')
   return collWhitespace(start + formatted + end, 2)
 }
 
@@ -112,19 +105,9 @@ export function prompt(
   strings: TemplateStringsArray,
   ...values: unknown[]
 ): string {
-  let formatted = formattedTemplates.get(strings)
-  if (!formatted && isStaticTemplate(strings)) {
-    // Native template parts are immutable and shared across calls at the same site.
-    formatted = new Array<string>(strings.length)
-    for (let i = 0; i < strings.length; i++) {
-      formatted[i] = formatString(strings[i])
-    }
-    formattedTemplates.set(strings, formatted)
-  }
-
   let promptString = ''
   for (let i = 0; i < strings.length; i++) {
-    promptString += formatted ? formatted[i] : formatString(strings[i])
+    promptString += formatString(strings[i])
     if (i < values.length) {
       promptString += String(values[i])
     }

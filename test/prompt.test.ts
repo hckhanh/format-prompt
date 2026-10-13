@@ -22,7 +22,7 @@ describe('prompt', () => {
     expect(prompt(strings, 'value')).toBe('Second value end')
   })
 
-  it('does not cache frozen template arrays with changing accessors', () => {
+  it('reads frozen template arrays with changing accessors on each call', () => {
     let part = '  First  '
     const strings = Object.assign([''], { raw: [''] })
     Object.defineProperty(strings, 0, { get: () => part })
@@ -38,6 +38,21 @@ describe('prompt', () => {
     Object.freeze(strings)
     expect(prompt(strings)).toBe('Hello world')
     expect(prompt(strings)).toBe('Hello world')
+  })
+
+  it.each([
+    ['  A\u00a0\u00a0B  ', 'A\u00a0\u00a0B'],
+    ['  A\r\n  B  ', 'A\r\nB'],
+    ['  A\u2003\u2003B  ', 'A\u2003\u2003B'],
+    ['  A\u2028  B  ', 'A\u2028 B'],
+  ])('preserves the whitespace semantics of %j', (input, expected) => {
+    const strings = Object.assign([input], { raw: [input] })
+    expect(prompt(strings)).toBe(expected)
+  })
+
+  it('preserves whitespace inside interpolated values', () => {
+    const value = 'A   B\n\n\n\tC'
+    expect(prompt`  Before   ${value}   After  `).toBe(`Before ${value} After`)
   })
 
   it('should remove leading and trailing whitespace', () => {
