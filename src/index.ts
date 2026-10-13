@@ -3,6 +3,7 @@ import { collapse } from 'string-collapse-white-space'
 
 const startRegex = /^([\s\n\r]+)/
 const endRegex = /([\s\n\r]+)$/
+const uncommonWhitespaceRegex = /[^\S \t\n]/
 
 /**
  * Formats a string by collapsing internal whitespace while preserving leading and trailing whitespace.
@@ -33,15 +34,28 @@ const endRegex = /([\s\n\r]+)$/
  * ```
  */
 function formatString(s: string): string {
+  if (s === '') {
+    return s
+  }
+
   const start = startRegex.exec(s)?.[0] ?? ''
   const end = endRegex.exec(s)?.[0] ?? ''
 
-  const formatted = collapse(s, {
-    trimnbsp: true,
-    trimLines: true,
-    removeEmptyLines: true,
-    limitConsecutiveEmptyLinesTo: 1,
-  }).result
+  // Keep the dependency's handling of carriage returns and Unicode whitespace.
+  const formatted = uncommonWhitespaceRegex.test(s)
+    ? collapse(s, {
+        trimnbsp: true,
+        trimLines: true,
+        removeEmptyLines: true,
+        limitConsecutiveEmptyLinesTo: 1,
+      }).result
+    : s
+        .trim()
+        .split('\n')
+        .map((line) => line.trim())
+        .join('\n')
+        .replace(/ {2,}/g, ' ')
+        .replace(/\n{3,}/g, '\n\n')
   return collWhitespace(start + formatted + end, 2)
 }
 

@@ -3,6 +3,65 @@ import { describe, expect, it } from 'vitest'
 import { prompt } from '../src'
 
 describe('prompt', () => {
+  it('formats each new value at a repeated template site', () => {
+    const render = (value: unknown) => prompt`  Hello   ${value}  !  `
+    expect(render('first')).toBe('Hello first !')
+    expect(render('second')).toBe('Hello second !')
+    let calls = 0
+    const value = { toString: () => String(++calls) }
+    expect(render(value)).toBe('Hello 1 !')
+    expect(render(value)).toBe('Hello 2 !')
+  })
+
+  it('reformats mutable template arrays after their contents change', () => {
+    const strings = Object.assign(['  First   ', '  end  '], {
+      raw: ['  First   ', '  end  '],
+    })
+    expect(prompt(strings, 'value')).toBe('First value end')
+    strings[0] = '  Second   '
+    expect(prompt(strings, 'value')).toBe('Second value end')
+  })
+
+  it('reads frozen template arrays with changing accessors on each call', () => {
+    let part = '  First  '
+    const strings = Object.assign([''], { raw: [''] })
+    Object.defineProperty(strings, 0, { get: () => part })
+    Object.freeze(strings)
+    expect(prompt(strings)).toBe('First')
+    part = '  Second  '
+    expect(prompt(strings)).toBe('Second')
+  })
+
+  it('formats frozen arrays without invoking overridden array methods', () => {
+    const strings = Object.assign(['  Hello    world  '], { raw: [''] })
+    Object.defineProperty(strings, 'map', { value: () => ['wrong'] })
+    Object.freeze(strings)
+    expect(prompt(strings)).toBe('Hello world')
+    expect(prompt(strings)).toBe('Hello world')
+  })
+
+  it.each([
+    ['  A\u00a0\u00a0B  ', 'A\u00a0\u00a0B'],
+    ['  A\r\n  B  ', 'A\r\nB'],
+    ['  A\u2003\u2003B  ', 'A\u2003\u2003B'],
+    ['  A\u2028  B  ', 'A\u2028 B'],
+  ])('preserves the whitespace semantics of %j', (input, expected) => {
+    const strings = Object.assign([input], { raw: [input] })
+    expect(prompt(strings)).toBe(expected)
+  })
+
+  it('preserves whitespace inside interpolated values', () => {
+    const value = 'A   B\n\n\n\tC'
+    expect(prompt`  Before   ${value}   After  `).toBe(`Before ${value} After`)
+  })
+
+  it('handles long tab runs while preserving interior tabs', () => {
+    const tabs = '\t'.repeat(10_000)
+    const input = `${tabs}Start${tabs}end\n${tabs}Next${tabs}`
+    const strings = Object.assign([input], { raw: [input] })
+    expect(prompt(strings)).toBe(`Start${tabs}end\nNext`)
+  })
+
   it('should remove leading and trailing whitespace', () => {
     const result = prompt`
       Hello world
