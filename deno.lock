@@ -6,7 +6,7 @@
     "npm:@biomejs/biome@2.5.15": "2.5.15",
     "npm:@changesets/cli@2.31.1": "2.31.1_@types+node@25.9.9",
     "npm:@changesets/config@3.1.4": "3.1.4",
-    "npm:@codspeed/vitest-plugin@6.0.0-beta.2": "6.0.0-beta.2_tinybench@2.9.0_vite@8.3.4_vitest@4.1.11_@types+node@25.9.9",
+    "npm:@codspeed/vitest-plugin@6.1.0": "6.1.0_tinybench@2.9.0_vite@8.3.4_vitest@4.1.11",
     "npm:@toon-format/toon@2.3.1": "2.3.1",
     "npm:@types/bun@1.4.3": "1.4.3",
     "npm:@types/node@25.9.9": "25.9.9",
@@ -284,18 +284,17 @@
         "prettier"
       ]
     },
-    "@codspeed/core@6.0.0-beta.2": {
-      "integrity": "sha512-l/elGsNOwQV/m8PZMK0j7FHRNvFytgeSUUwUFuO6WSDZGYe3uH+da5mMjS1KpRsRElYvshkKrqvnRRqxzWQ/tQ==",
+    "@codspeed/core@6.1.0": {
+      "integrity": "sha512-lxFkexeuf6iOWUZmgCeuGSVgk0fKBbtnCVd3w3UWi3627/4t55FhA046LhFLzedCQUi6183s99DnM3/6TRjzHQ==",
       "dependencies": [
         "axios",
-        "find-up@6.3.0",
         "form-data",
         "node-gyp-build",
         "stack-trace"
       ]
     },
-    "@codspeed/vitest-plugin@6.0.0-beta.2_tinybench@2.9.0_vite@8.3.4_vitest@4.1.11_@types+node@25.9.9": {
-      "integrity": "sha512-mgSN3Cah77d84W1VFRfU3yRIz9W4rI+/sXgb8U1q6f55GyuQ3NyqB0p4lhRpzz1Oe2mRevHD0e7SkPHSOBEjyQ==",
+    "@codspeed/vitest-plugin@6.1.0_tinybench@2.9.0_vite@8.3.4_vitest@4.1.11": {
+      "integrity": "sha512-jYGZo8RSCIYD0G/+WWeZZUcQtGzz6Xl9gsdaElg9EQr5D99DbtDd2QxJYtA/9DWoWlXSP/EPR2OQR2UeHpYTSQ==",
       "dependencies": [
         "@codspeed/core",
         "tinybench",
@@ -351,7 +350,7 @@
       "dependencies": [
         "@babel/runtime",
         "@types/node@12.20.55",
-        "find-up@4.1.0",
+        "find-up",
         "fs-extra@8.1.0"
       ]
     },
@@ -1069,15 +1068,8 @@
     "find-up@4.1.0": {
       "integrity": "sha512-PpOwAdQ/YlXQ2vj8a3h8IipDuYRi3wceVQQGYWxNINccq40Anw7BlsEXCMbt1Zt+OLA6Fq9suIpIWD0OsnISlw==",
       "dependencies": [
-        "locate-path@5.0.0",
-        "path-exists@4.0.0"
-      ]
-    },
-    "find-up@6.3.0": {
-      "integrity": "sha512-v2ZsoEuVHYy8ZIlYqwPe/39Cy+cFDzp4dXPaxNvkEuouymu+2Jbz0PxpKarJHYJTmv2HWT3O382qY8l4jMWthw==",
-      "dependencies": [
-        "locate-path@7.2.0",
-        "path-exists@5.0.0"
+        "locate-path",
+        "path-exists"
       ]
     },
     "follow-redirects@1.16.1": {
@@ -1390,13 +1382,7 @@
     "locate-path@5.0.0": {
       "integrity": "sha512-t7hw9pI+WvuwNJXwk5zVHpyhIqzg2qTlklJOf0mVxGSbe3Fp2VieZcduNYjaLDoy6p9uGpQEGWG87WpMKlNq8g==",
       "dependencies": [
-        "p-locate@4.1.0"
-      ]
-    },
-    "locate-path@7.2.0": {
-      "integrity": "sha512-gvVijfZvn7R+2qyPX8mAuKcFGDf6Nc61GdvGafQsHL0sBIxfKzA+usWn4GFC/bk+QdwPUD4kWFJLhElipq+0VA==",
-      "dependencies": [
-        "p-locate@6.0.0"
+        "p-locate"
       ]
     },
     "lodash.startcase@4.4.0": {
@@ -1507,22 +1493,10 @@
         "p-try"
       ]
     },
-    "p-limit@4.0.0": {
-      "integrity": "sha512-5b0R4txpzjPWVw/cXXUResoD4hb6U/x9BH08L7nw+GN1sezDzPdxeRvpc9c433fZhBan/wusjbCsqwqm4EIBIQ==",
-      "dependencies": [
-        "yocto-queue"
-      ]
-    },
     "p-locate@4.1.0": {
       "integrity": "sha512-R79ZZ/0wAxKGu3oYMlz8jy/kbhsNrS7SKZ7PxEHBgJ5+F2mtFW2fK2cOtBh1cHYkQsbzFV7I+EoRKe6Yt0oK7A==",
       "dependencies": [
-        "p-limit@2.3.0"
-      ]
-    },
-    "p-locate@6.0.0": {
-      "integrity": "sha512-wPrq66Llhl7/4AGC6I+cqxT07LhXvWL08LNXz1fENOw0Ap4sRZZ/gZpTTJ5jpurzzzfS2W/Ge9BY3LgLjCShcw==",
-      "dependencies": [
-        "p-limit@4.0.0"
+        "p-limit"
       ]
     },
     "p-map@2.1.0": {
@@ -1539,9 +1513,6 @@
     },
     "path-exists@4.0.0": {
       "integrity": "sha512-ak9Qy5Q7jYb2Wwcey5Fpvg2KoAc/ZIhLSLOSBmRmygPsGwkVVt0fZa0qrtMz+m6tJTAHfZQ8FnmB4MG4LWy7/w=="
-    },
-    "path-exists@5.0.0": {
-      "integrity": "sha512-RjhtfwJOxzcFmNOi6ltcbcu4Iu+FL3zEj83dk4kAS+fVpTxXLO1b38RvJgT/0QwvV/L3aY9TAnyv0EOqW4GoMQ=="
     },
     "path-key@3.1.1": {
       "integrity": "sha512-ojmeN0qd+y0jszEtoY48r0Peq5dwMEkIlCOu6Q5f41lfkswXuKtYrhgoTpLnyIcHm24Uhqx+5Tqm2InSwLhE6Q=="
@@ -1979,9 +1950,6 @@
       "integrity": "sha512-2AvhNX3mb8zd6Zy7INTtSpl1F15HW6Wnqj0srWlkKLcpYl/gMIMJiyuGq2KeI2YFxUPjdlB+3Lc10seMLtL4cA==",
       "bin": true
     },
-    "yocto-queue@1.2.2": {
-      "integrity": "sha512-4LCcse/U2MHZ63HAJVE+v71o7yOdIe4cZ70Wpf8D/IyjDKYQLV5GD46B+hSTjJsvV5PztjvHoU580EftxjDZFQ=="
-    },
     "yuku-ast@0.10.2": {
       "integrity": "sha512-UnG9mA6giglCvSErft2/40TVFX750Sj1xgwddPLpG7J7rlr/P1wPADg9G2RK+d/1tNLtRVoLdMMOMVBB9561TQ==",
       "dependencies": [
@@ -2043,7 +2011,7 @@
         "npm:@biomejs/biome@2.5.15",
         "npm:@changesets/cli@2.31.1",
         "npm:@changesets/config@3.1.4",
-        "npm:@codspeed/vitest-plugin@6.0.0-beta.2",
+        "npm:@codspeed/vitest-plugin@6.1.0",
         "npm:@toon-format/toon@2.3.1",
         "npm:@types/bun@1.4.3",
         "npm:@types/node@25.9.9",
