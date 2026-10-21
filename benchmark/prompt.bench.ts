@@ -1,27 +1,27 @@
-import { bench, describe } from 'vitest'
+import { test } from 'vitest'
 import { prompt } from '../src'
 
-describe('prompt formatting', () => {
-  bench('simple prompt without interpolation', () => {
+test('prompt formatting', { timeout: 120_000 }, async ({ bench }) => {
+  await bench('simple prompt without interpolation', () => {
     prompt`
       You are a helpful assistant.
       Please provide accurate information.
     `
-  })
+  }).run()
 
-  bench('prompt with single interpolation', () => {
+  await bench('prompt with single interpolation', () => {
     const name = 'John'
     prompt`Hello ${name}, how can I help you today?`
-  })
+  }).run()
 
-  bench('prompt with multiple interpolations', () => {
+  await bench('prompt with multiple interpolations', () => {
     const name = 'John'
     const age = 30
     const city = 'New York'
     prompt`User: ${name}, Age: ${age}, City: ${city}`
-  })
+  }).run()
 
-  bench('complex multiline prompt', () => {
+  await bench('complex multiline prompt', () => {
     const email = 'test@example.com'
     prompt`
       You are a security guard that analyze the given email for spam/scam/toxicity/business relevance:
@@ -38,18 +38,18 @@ describe('prompt formatting', () => {
 
       If you are not sure about any links, emails or any information, use tools.
     `
-  })
+  }).run()
 
-  bench('prompt with heavy indentation', () => {
+  await bench('prompt with heavy indentation', () => {
     prompt`
                         This is heavily indented
                           More indentation here
                         Back to previous level
                       Even less indentation
     `
-  })
+  }).run()
 
-  bench('prompt with many line breaks', () => {
+  await bench('prompt with many line breaks', () => {
     prompt`
       Line 1
       
@@ -60,38 +60,38 @@ describe('prompt formatting', () => {
       
       Line 3
     `
-  })
+  }).run()
 
-  bench('prompt with mixed whitespace', () => {
+  await bench('prompt with mixed whitespace', () => {
     prompt`Text   with     lots    of     spaces    and		tabs	mixed	together`
-  })
+  }).run()
 
-  bench('small inline prompt', () => {
+  await bench('small inline prompt', () => {
     prompt`Quick message`
-  })
+  }).run()
 
-  bench('prompt with object interpolation', () => {
+  await bench('prompt with object interpolation', () => {
     const data = { id: 1, name: 'John', values: [1, 2, 3] }
     prompt`Data: ${data}`
-  })
+  }).run()
 
-  bench('empty prompt', () => {
+  await bench('empty prompt', () => {
     prompt``
-  })
+  }).run()
 
-  bench('first use of a multiline template', () => {
+  await bench('first use of a multiline template', () => {
     const strings = Object.freeze(
       Object.assign(['  Hello\n    world  '], {
         raw: Object.freeze(['  Hello\n    world  ']),
       }),
     )
     prompt(strings)
-  })
+  }).run()
 
-  bench('mutable template parts', () => {
+  await bench('mutable template parts', () => {
     const strings = Object.assign(['Hello  ', '  world'], {
       raw: ['Hello  ', '  world'],
     })
     prompt(strings, 'reader')
-  })
+  }).run()
 })
