@@ -72,7 +72,7 @@
   ],
   "license": "MIT",
   "overrides": {
-    "postcss": "8.5.30",
+    "postcss": "8.5.31",
     "vite": "8.3.4"
   }
 }
