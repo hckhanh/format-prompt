@@ -8,7 +8,7 @@
     "npm:@changesets/config@3.1.4": "3.1.4",
     "npm:@codspeed/vitest-plugin@6.1.1": "6.1.1_tinybench@6.2.4_vite@8.3.5_vitest@5.0.5",
     "npm:@toon-format/toon@2.3.1": "2.3.1",
-    "npm:@types/bun@1.4.3": "1.4.3",
+    "npm:@types/bun@1.4.4": "1.4.4",
     "npm:@types/node@25.9.9": "25.9.9",
     "npm:@vitest/coverage-v8@5.0.5": "5.0.5_vitest@5.0.5_@types+node@25.9.9_vite@8.3.5",
     "npm:knip@5.88.1": "5.88.1_@types+node@25.9.9_typescript@5.9.3",
@@ -579,8 +579,8 @@
         "tslib"
       ]
     },
-    "@types/bun@1.4.3": {
-      "integrity": "sha512-N67Pqy8JXbAY/j0tNraS3V5mubGvc6rrrNDmDCtZLlFzccbUJPDb0tvgUBC5q4m8ybkP93Jcn1QB+RYQ6PvBhw==",
+    "@types/bun@1.4.4": {
+      "integrity": "sha512-9wkRDXUXK124pEnAutE6n/l18j+i9GC5IAHK8TmX/2nlySETmky0OU6yL5U8pW1AoKh++AN9auDCr647BfurjQ==",
       "dependencies": [
         "bun-types"
       ]
@@ -768,8 +768,8 @@
         "fill-range"
       ]
     },
-    "bun-types@1.4.3": {
-      "integrity": "sha512-tinRJNGOmUN+tEAsn2y2e942n9JHRHR42iUYzDH75NmhJqVBokGSQkkfSFdNWwsANIdrK6ACH9t01M452YyTwg==",
+    "bun-types@1.4.4": {
+      "integrity": "sha512-yjrJh5oGX7mMPKGd19YXyIjmEuj4G4zNC30bs7PM9Az7NQ3ndF3j6hbeRdvJTRQEhJ/FYQwW0a2moweEi2hMxQ==",
       "dependencies": [
         "@types/node@25.9.9",
         "undici-types"
@@ -1815,7 +1815,7 @@
         "npm:@changesets/config@3.1.4",
         "npm:@codspeed/vitest-plugin@6.1.1",
         "npm:@toon-format/toon@2.3.1",
-        "npm:@types/bun@1.4.3",
+        "npm:@types/bun@1.4.4",
         "npm:@types/node@25.9.9",
         "npm:@vitest/coverage-v8@5.0.5",
         "npm:knip@5.88.1",
