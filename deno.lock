@@ -1828,7 +1828,7 @@
         "npm:vitest@5.0.5"
       ],
       "overrides": {
-        "postcss": "8.5.31",
+        "postcss": "8.5.33",
         "vite": "8.3.5"
       }
     }
