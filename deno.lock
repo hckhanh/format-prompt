@@ -5,7 +5,7 @@
     "jsr:@standard-schema/spec@1": "1.1.0",
     "npm:@biomejs/biome@2.6.8": "2.6.8",
     "npm:@changesets/cli@2.31.1": "2.31.1_@types+node@25.9.9",
-    "npm:@changesets/config@3.1.4": "3.1.4",
+    "npm:@changesets/config@4.0.1": "4.0.1",
     "npm:@codspeed/vitest-plugin@6.1.1": "6.1.1_vite@8.3.8_vitest@5.1.1_@types+node@25.9.9_@vitest+coverage-v8@5.1.1",
     "npm:@toon-format/toon@2.3.1": "2.3.1",
     "npm:@types/bun@1.4.5": "1.4.5",
@@ -124,12 +124,12 @@
     "@changesets/apply-release-plan@7.1.1": {
       "integrity": "sha512-9qPCm/rLx/xoOFXIHGB229+4GOL76S4MC+7tyOuTsR6+1jYlfFDQORdvwR5hDA6y4FL2BPt3qpbcQIS+dW85LA==",
       "dependencies": [
-        "@changesets/config",
+        "@changesets/config@3.1.4",
         "@changesets/get-version-range-type",
         "@changesets/git",
-        "@changesets/should-skip-package",
+        "@changesets/should-skip-package@0.1.2",
         "@changesets/types@6.1.0",
-        "@manypkg/get-packages",
+        "@manypkg/get-packages@1.1.3",
         "detect-indent",
         "fs-extra@7.0.1",
         "lodash.startcase",
@@ -143,10 +143,10 @@
       "integrity": "sha512-rSDcqdJ9KbVyjpBIuCidhvZNIiVt1XaIYp73ycVQRIA5n/j6wQaEk0ChRLMUQ1vkxZe51PTQ9OIhbg6HQMW45A==",
       "dependencies": [
         "@changesets/errors",
-        "@changesets/get-dependents-graph",
-        "@changesets/should-skip-package",
+        "@changesets/get-dependents-graph@2.1.4",
+        "@changesets/should-skip-package@0.1.2",
         "@changesets/types@6.1.0",
-        "@manypkg/get-packages",
+        "@manypkg/get-packages@1.1.3",
         "semver"
       ]
     },
@@ -162,19 +162,19 @@
         "@changesets/apply-release-plan",
         "@changesets/assemble-release-plan",
         "@changesets/changelog-git",
-        "@changesets/config",
+        "@changesets/config@3.1.4",
         "@changesets/errors",
-        "@changesets/get-dependents-graph",
+        "@changesets/get-dependents-graph@2.1.4",
         "@changesets/get-release-plan",
         "@changesets/git",
         "@changesets/logger",
         "@changesets/pre",
         "@changesets/read",
-        "@changesets/should-skip-package",
+        "@changesets/should-skip-package@0.1.2",
         "@changesets/types@6.1.0",
         "@changesets/write",
         "@inquirer/external-editor",
-        "@manypkg/get-packages",
+        "@manypkg/get-packages@1.1.3",
         "ansi-colors",
         "enquirer",
         "fs-extra@7.0.1",
@@ -192,13 +192,23 @@
       "integrity": "sha512-pf0bvD/v6WI2cRlZ6hzpjtZdSlXDXMAJ+Iz7xfFzV4ZxJ8OGGAON+1qYc99ZPrijnt4xp3VGG7eNvAOGS24V1Q==",
       "dependencies": [
         "@changesets/errors",
-        "@changesets/get-dependents-graph",
+        "@changesets/get-dependents-graph@2.1.4",
         "@changesets/logger",
-        "@changesets/should-skip-package",
+        "@changesets/should-skip-package@0.1.2",
         "@changesets/types@6.1.0",
-        "@manypkg/get-packages",
+        "@manypkg/get-packages@1.1.3",
         "fs-extra@7.0.1",
         "micromatch"
+      ]
+    },
+    "@changesets/config@4.0.1": {
+      "integrity": "sha512-PxpxSQLQSLDjceAgRq+4FWlU+HflDIw03mmPVipxoQx9xrXFUjmqTy3SE+n/2t+DqPdpPiLWVr5NRiLZvjyLwg==",
+      "dependencies": [
+        "@changesets/get-dependents-graph@3.0.0",
+        "@changesets/should-skip-package@1.0.0",
+        "@changesets/types@7.0.0",
+        "@manypkg/get-packages@3.1.0",
+        "picomatch@4.0.7"
       ]
     },
     "@changesets/errors@0.2.0": {
@@ -211,8 +221,15 @@
       "integrity": "sha512-ZsS00x6WvmHq3sQv8oCMwL0f/z3wbXCVuSVTJwCnnmbC/iBdNJGFx1EcbMG4PC6sXRyH69liM4A2WKXzn/kRPg==",
       "dependencies": [
         "@changesets/types@6.1.0",
-        "@manypkg/get-packages",
+        "@manypkg/get-packages@1.1.3",
         "picocolors",
+        "semver"
+      ]
+    },
+    "@changesets/get-dependents-graph@3.0.0": {
+      "integrity": "sha512-ji/t5wFA1zREKXRUePE6Qi+Qu2UgxCeSSGQrphezwvQZrp49B7sJ+8+wvM0tA7zPeSxYKCojDy3WWgrl+s+awg==",
+      "dependencies": [
+        "@changesets/types@7.0.0",
         "semver"
       ]
     },
@@ -220,11 +237,11 @@
       "integrity": "sha512-2K5Om6CrMPm45rtvckfzWo7e9jOVCKLCnXia5eUPaURH7/LWzri7pK1TycdzAuAtehLkW7VPbWLCSExTHmiI6g==",
       "dependencies": [
         "@changesets/assemble-release-plan",
-        "@changesets/config",
+        "@changesets/config@3.1.4",
         "@changesets/pre",
         "@changesets/read",
         "@changesets/types@6.1.0",
-        "@manypkg/get-packages"
+        "@manypkg/get-packages@1.1.3"
       ]
     },
     "@changesets/get-version-range-type@0.4.0": {
@@ -234,7 +251,7 @@
       "integrity": "sha512-BXANzRFkX+XcC1q/d27NKvlJ1yf7PSAgi8JG6dt8EfbHFHi4neau7mufcSca5zRhwOL8j9s6EqsxmT+s+/E6Sw==",
       "dependencies": [
         "@changesets/errors",
-        "@manypkg/get-packages",
+        "@manypkg/get-packages@1.1.3",
         "is-subdir",
         "micromatch",
         "spawndamnit"
@@ -258,7 +275,7 @@
       "dependencies": [
         "@changesets/errors",
         "@changesets/types@6.1.0",
-        "@manypkg/get-packages",
+        "@manypkg/get-packages@1.1.3",
         "fs-extra@7.0.1"
       ]
     },
@@ -278,7 +295,13 @@
       "integrity": "sha512-qAK/WrqWLNCP22UDdBTMPH5f41elVDlsNyat180A33dWxuUDyNpg6fPi/FyTZwRriVjg0L8gnjJn2F9XAoF0qw==",
       "dependencies": [
         "@changesets/types@6.1.0",
-        "@manypkg/get-packages"
+        "@manypkg/get-packages@1.1.3"
+      ]
+    },
+    "@changesets/should-skip-package@1.0.0": {
+      "integrity": "sha512-pwqoJmbONn1XgXmZXPEExgAaT+HdZLjALFTDgIm+PnS5KeO2nLtzA2/Q+4aMFY14kFMuXKG30MObhvDzWgzDgg==",
+      "dependencies": [
+        "@changesets/types@7.0.0"
       ]
     },
     "@changesets/types@4.1.0": {
@@ -286,6 +309,9 @@
     },
     "@changesets/types@6.1.0": {
       "integrity": "sha512-rKQcJ+o1nKNgeoYRHKOS07tAMNd3YSN0uHaJOZYjBAgxfV7TUE7JE+z4BzZdQwb5hKaYbayKN5KrYV7ODb2rAA=="
+    },
+    "@changesets/types@7.0.0": {
+      "integrity": "sha512-c5GoiQyt3pxiXjrWSNoP8/GRf4kG+VnKzovx1OQM8dYYALlSwgedmkPmJ+ZqGxqwg9D3Bkj85Uo4KLd5BN3A0w=="
     },
     "@changesets/write@0.4.0": {
       "integrity": "sha512-CdTLvIOPiCNuH71pyDu3rA+Q0n65cmAbXnwWH84rKGiFumFzkmHNT8KHTMEchcxN+Kl8I54xGUhJ7l3E7X396Q==",
@@ -366,15 +392,36 @@
         "fs-extra@8.1.0"
       ]
     },
+    "@manypkg/find-root@3.1.0": {
+      "integrity": "sha512-BcSqCyKhBVZ5YkSzOiheMCV41kqAFptW6xGqYSTjkVTl9XQpr+pqHhwgGCOHQtjDCv7Is6EFyA14Sm5GVbVABA==",
+      "dependencies": [
+        "@manypkg/tools"
+      ]
+    },
     "@manypkg/get-packages@1.1.3": {
       "integrity": "sha512-fo+QhuU3qE/2TQMQmbVMqaQ6EWbMhi4ABWP+O4AM1NqPBuy0OrApV5LO6BrrgnhtAHS2NH6RrVk9OL181tTi8A==",
       "dependencies": [
         "@babel/runtime",
         "@changesets/types@4.1.0",
-        "@manypkg/find-root",
+        "@manypkg/find-root@1.1.0",
         "fs-extra@8.1.0",
         "globby",
         "read-yaml-file"
+      ]
+    },
+    "@manypkg/get-packages@3.1.0": {
+      "integrity": "sha512-0TbBVyvPrP7xGYBI/cP8UP+yl/z+HtbTttAD7FMAJgn/kXOTwh5/60TsqP9ZYY710forNfyV0N8P/IE/ujGZJg==",
+      "dependencies": [
+        "@manypkg/find-root@3.1.0",
+        "@manypkg/tools"
+      ]
+    },
+    "@manypkg/tools@2.1.2": {
+      "integrity": "sha512-6QEf6yqFbETdwGITKq57aYoPfX/3K8XFNwsAlx0C1M7o8cb79sv1M3w+tWuWvIcSbNqrLF7OD7YpZMVVz335hQ==",
+      "dependencies": [
+        "jju",
+        "tinyglobby",
+        "yaml"
       ]
     },
     "@napi-rs/wasm-runtime@1.2.6_@emnapi+core@2.0.0-beta.2_@emnapi+runtime@2.0.0-beta.2": {
@@ -1188,6 +1235,9 @@
       "integrity": "sha512-ekilCSN1jwRvIbgeg/57YFh8qQDNbwDb9xT/qu2DAHbFFZUicIl4ygVaAvzveMhMVr3LnpSKTNnwt8PoOfmKhQ==",
       "bin": true
     },
+    "jju@1.4.0": {
+      "integrity": "sha512-8wb9Yw966OSxApiCt0K3yNJL8pnNeIv+OEq2YMidz4FKP6nonSRoOXc80iXY4JaN2FC11B9qsNmDsm+ZOfMROA=="
+    },
     "js-tokens@10.0.0": {
       "integrity": "sha512-lM/UBzQmfJRo9ABXbPWemivdCW8V2G8FHaHdypQaIy523snUjog0W71ayWXTjiR+ixeMyVHN2XcpnTd/liPg/Q=="
     },
@@ -1597,8 +1647,8 @@
     "safer-buffer@2.1.2": {
       "integrity": "sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg=="
     },
-    "semver@7.7.4": {
-      "integrity": "sha512-vFKC2IEtQnVhpT78h1Yp8wzwrf8CM+MzKMHGJZfBtzhZNycRFnXsHk6E5TxIkkMsgNS7mdX3AGB7x2QM2di4lA==",
+    "semver@7.8.6": {
+      "integrity": "sha512-9lpSSU4Mly3mrtruwLs1eLK6+gzbzqeBFwRNjIjE+9LuDpWdYctrQlQ3ej1Ilgi7gknpsTRnPoLP8DpCHqHIJw==",
       "bin": true
     },
     "shebang-command@2.0.0": {
@@ -1864,8 +1914,8 @@
       "integrity": "sha512-Tb2FUhB4vUsGQlfSquQLYkApkuPAFQXGFzxWKHHumVz2dK+X1RUm/HnID4+TfIGYJ1kTcwOaCk/buYCEJr6YjQ==",
       "bin": true
     },
-    "yaml@2.8.3": {
-      "integrity": "sha512-AvbaCLOO2Otw/lW5bmh9d/WEdcDFdQp2Z2ZUH3pX9U2ihyUY0nvLv7J6TrWowklRGPYbB/IuIMfYgxaCPg5Bpg==",
+    "yaml@2.9.1": {
+      "integrity": "sha512-3NxN8+78OdzbT7C/WjGsyfPAtJaN3FNDsWxv7Y7mcDsT/oOmgW8BpyQQFFBnvZE3j9Y2Sdz1ULFLezL7Eb2yFw==",
       "bin": true
     },
     "yuku@0.28.1": {
@@ -1892,7 +1942,7 @@
       "dependencies": [
         "npm:@biomejs/biome@2.6.8",
         "npm:@changesets/cli@2.31.1",
-        "npm:@changesets/config@3.1.4",
+        "npm:@changesets/config@4.0.1",
         "npm:@codspeed/vitest-plugin@6.1.1",
         "npm:@toon-format/toon@2.3.1",
         "npm:@types/bun@1.4.5",
